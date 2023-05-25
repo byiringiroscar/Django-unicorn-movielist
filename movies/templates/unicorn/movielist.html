@@ -1,0 +1,15 @@
+<div>
+    <!-- put component code here -->
+    <h2>Movie List</h2>
+    <hr>
+    <input type="text" unicorn:model="name" required>
+    <button unicorn:click="add_movie">Add Movie</button>
+
+    <button unicorn:click="delete_all">Delete all</button>
+
+    <ul>
+        {% for movie in movies %}
+            <li>{{ movie.name }}</li>
+        {% endfor %}
+    </ul>
+</div>

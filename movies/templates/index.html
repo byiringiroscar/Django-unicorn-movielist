@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load unicorn %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movielist</title>
+    <style>
+        html, body { margin: 0; padding: 0; }
+        .header{
+            height: 50px;
+            width: 100%;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+        }
+        main{
+            margin-left: 30px;
+        }
+    </style>
+    {% unicorn_scripts %}
+
+
+</head>
+<body>
+    {% csrf_token %}
+    <div class="header">Excellent Movie App</div>
+
+    <main>
+        {% unicorn 'movielist' %}
+    </main>
+
+
+
+</body>
+</html>
